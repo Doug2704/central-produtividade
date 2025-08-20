@@ -1,117 +1,131 @@
 /* ===== Reset básico ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ===== Tema escuro ===== */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    padding: 20px;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 /* ===== Cabeçalho ===== */
 header {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 header h1 {
-    font-size: 2rem;
-    color: #ffffff;
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 header p {
-    color: #aaaaaa;
+  color: #aaaaaa;
 }
 
 /* ===== Container de opções ===== */
 .options {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 900px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 20px; /* adicionado para evitar sobreposição */
 }
 
-/* ===== Blocos ===== */
 .options > div {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-h2 {
-    margin-bottom: 10px;
-    color: #4cafef;
-    font-size: 1.2rem;
+/* ===== Elementos de texto ===== */
+h2, a {
+  margin-bottom: 10px;
+  color: #4cafef;
+  font-size: 1.2rem;
 }
 
 /* ===== Campos de entrada ===== */
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #2a2a2a;
-    color: #ffffff;
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: #ffffff;
 }
 
-input[type="text"]:focus,
-textarea:focus {
-    border: 1px solid #4cafef;
-    background-color: #333333;
+input[type="text"]:focus, textarea:focus {
+  border: 1px solid #4cafef;
+  background-color: #333333;
 }
 
 /* ===== Botões ===== */
 button {
-    background-color: #4cafef;
-    color: #ffffff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  background-color: #4cafef;
+  color: #ffffff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #3a9ad9;
+  background-color: #3a9ad9;
 }
 
 /* ===== Resultados ===== */
-.result,
-#result-initUC,
-#result-totalUC,
-#result-CSV {
-    background-color: #2a2a2a;
-    padding: 10px;
-    border-radius: 5px;
-    min-height: 30px;
-    color: #d4d4d4;
-    margin-top: 10px;
-    white-space: pre-wrap;
+.result, #result-initUC, #result-totalUC, #result-CSV {
+  background-color: #2a2a2a;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 30px;
+  color: #d4d4d4;
+  margin-top: 10px;
+  white-space: pre-wrap;
 }
 
+/* ===== Rodapé ===== */
 footer {
-    text-align: center; /* Centraliza o texto */
-    padding: 10px;
-   
+  padding: 10px;
+  text-align: center;
+  margin-top: auto; /* adicionado para fixar o footer no final */
 }
 
 footer a {
-    color: #007BFF; /* azul visível */
-    text-decoration: none; /* remove o sublinhado */
+  color: #007BFF;
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* sublinhado no hover */
+  text-decoration: underline;
+}
+
+#input-CSV {
+  max-height: 400px;
 }

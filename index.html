@@ -1,49 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central de Produtividade</title>
+    <title>Central de Ferramentas RIX</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
-    <header>
-        <h1>Bem-Vindo!!!</h1>
-        <p>Aqui você encontrará algumas ferramentas para aumentar a produtividade em tarefas repetitivas</p>
-    </header>
-    <div class="options">
-        <div class="optionInverter">
-            <h2>Texto Invertido:</h2>
-            <input type="text" id="input-invert" placeholder="RIX Telecom -> moceleT XIR" oninput="invertText()">
-            <div id="result-invert" class="result"></div>
-        </div>
-        <div>
-            <h2>Texto com Primeiras Letras Maiúsculas:</h2>
-            <input type="text" id="input-initUC" placeholder="RIX Telecom -> Rix Telecom" oninput="upperCaseInitial()">
-            <div id="result-initUC"></div>
-        </div>
-        <div>
-            <h2>Texto Totalmente Maiúsculo:</h2>
-            <input type="text" id="input-totalUC" placeholder="RIX Telecom -> RIX TELECOM" oninput=upperCaseTotalText()>
-            <div id="result-totalUC" class="result"></div>
-        </div>
-        <div>
-            <h2>Gerar Planilha de Chamados</h2>
-            <textarea id="input-CSV" rows="30" cols="120"
-                placeholder="Copie o relatório de incidentes do Zabbix aqui sem alterar nada."></textarea>
-            <br><br>
-            <button onclick="generateCSV()">Gerar e Baixar Planilha</button>
-            <pre id="result-CSV"></pre>
-        </div>
+    <div class="container">
+        <header>
+            <h1>Central de Ferramentas RIX</h1>
+        </header>
+        <main>
+            <div class="options">
+                <div class="optionInverter">
+                    <h2>Texto Invertido:</h2>
+                    <input type="text" id="input-invert" placeholder="RIX Telecom -> moceleT XIR"
+                        oninput="invertText()">
+                    <div id="result-invert" class="result"></div>
+                </div>
+                <div>
+                    <h2>Texto com Primeiras Letras Maiúsculas:</h2>
+                    <input type="text" id="input-initUC" placeholder="RIX Telecom -> Rix Telecom"
+                        oninput="upperCaseInitial()">
+                    <div id="result-initUC" class="result"></div>
+                </div>
+                <div>
+                    <h2>Texto Totalmente Maiúsculo:</h2>
+                    <input type="text" id="input-totalUC" placeholder="RIX Telecom -> RIX TELECOM"
+                        oninput="upperCaseTotalText()">
+                    <div id="result-totalUC" class="result"></div>
+                </div>
+                <div class="link-glpi">
+                    <a href="reports.html">Gerador de Relatórios GLPI</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 Douglas Cândido</p>
+            <a href="https://github.com/Doug2704" target="_blank">@Doug2704</a>
+        </footer>
     </div>
     <script src="js/scripts.js"></script>
-    <footer>
-        <p>&copy; 2025 Douglas Cândido</p>
-        <a href="https://github.com/Doug2704" target="_blank">@Doug2704</a>
-    </footer>
 </body>
 
 </html>
